@@ -1384,7 +1384,7 @@ li:before { content:'✓ '; }
   const requestEvaluation = () => {
     if (loading || !activeWeek) return;
     const prompt =
-      "Evalúa ahora mi nivel según los objetivos de esta sesión. Decide si ya domino el contenido o qué me falta, y cierra tu mensaje OBLIGATORIAMENTE con la etiqueta exacta [EVALUACIÓN: APROBADO] o [EVALUACIÓN: PENDIENTE] en su propia línea al final.";
+      "ACTIVACIÓN DEL MECANISMO DE EVALUACIÓN FORZADA: el alumno solicitó explícitamente cerrar esta ronda con un veredicto. Esto tiene prioridad sobre tu criterio normal de esperar más evidencia. Con lo que tengas HASTA AHORA, decide: si es suficiente, usa [EVALUACIÓN: APROBADO]; si no, usa [EVALUACIÓN: PENDIENTE] indicando qué falta — PENDIENTE no reprueba ni cierra nada, el alumno tiene reintentos ilimitados y puede seguir intentándolo. Puedes seguir haciendo preguntas de seguimiento, pero DEBES incluir en ESTE mismo mensaje la etiqueta exacta [EVALUACIÓN: APROBADO] o [EVALUACIÓN: PENDIENTE] en su propia línea al final. No está permitido responder solo con preguntas y omitir la etiqueta.";
     setMessages((prev) => [
       ...prev,
       {
